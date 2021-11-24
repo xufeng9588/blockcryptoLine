@@ -1,0 +1,24 @@
+{
+    "name": "line",
+    "desc": "line",
+    "columns": {
+        "time": {
+            "type": "DATE"
+        },
+        "type": {
+            "type": [
+                "STRING",
+                20
+            ]
+        },
+        "result": {
+            "type":"FLOAT"
+        },
+        "time_interval":{
+            "type":[
+                "STRING",
+                20
+            ]
+        }
+    }
+}
