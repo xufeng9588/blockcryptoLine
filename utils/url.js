@@ -1,19 +1,12 @@
-const { config } = require('../config/index')
+const { config_url } = require('../config/index')
 
-function url(typeName) {
+function blockCryptoUrl(typeName) {
     const time = new Date().valueOf();
-    const { baseurl, type, futuresType, optionsType } = config;
-    const { futures, options } = type;
-    const { largeopenInt, openInt, openShortInt, netPosion } = futuresType;
-    if (typeName === 'LOI') {
-        var url = `${baseurl}/dashboard/markets_${futures}_${largeopenInt}_weekly_cftccot.json?v=${time}`;
-    } else if (typeName === 'OI') {
-        var url = `${baseurl}/dashboard/markets_${futures}_${openInt}_weekly_cftccot.json?v=${time}`;
-    } else if (typeName === 'OSI') {
-        var url = `${baseurl}/dashboard/markets_${futures}_${openShortInt}_weekly_cftccot.json?v=${time}`;
-    } else if (typeName === 'NP') {
-        var url = `${baseurl}/dashboard/markets_${futures}_${netPosion}_weekly_cftccot.json?v=${time}`;
-    } else return
+    const { baseurl, type, futuresType } = config_url;
+    const { futures } = type;
+    // console.log(futuresType[typeName],futuresType,'typename')
+    const reqParmas = futuresType[typeName];
+    const url = `${baseurl}/dashboard/markets_${futures}_${reqParmas}_weekly_cftccot.json?v=${time}`;
     const parameter = {
         url: url,
         headers: {
@@ -22,9 +15,9 @@ function url(typeName) {
     }
     return parameter
 }
-
+// console.log(blockCryptoUrl('openInt'))
 module.exports = {
-    url
+    blockCryptoUrl
 }
 
 // large open interest holder sofcme bitcoin futures

@@ -6,19 +6,14 @@
             "type": "DATE"
         },
         "type": {
-            "type": [
-                "STRING",
-                20
-            ]
+            "type": ["STRING",20],
+            "index":true
         },
         "result": {
             "type":"FLOAT"
         },
         "time_interval":{
-            "type":[
-                "STRING",
-                20
-            ]
+            "type":["STRING",20]
         }
     }
 }
