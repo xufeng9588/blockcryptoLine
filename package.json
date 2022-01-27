@@ -1,0 +1,22 @@
+{
+  "name": "line",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "database_influx_pg": "^1.0.0",
+    "dtsmake": "^0.0.10",
+    "install": "^0.13.0",
+    "lodash": "^4.17.21",
+    "request": "^2.88.2",
+    "request_api_data": "^1.0.0",
+    "superagent": "^6.1.0"
+  }
+}

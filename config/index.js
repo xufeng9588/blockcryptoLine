@@ -25,10 +25,10 @@ const queryKWord = {
         }
     },
     NP: {
-        NP_AM: { get:'Asset Managers',save:'asset_managers' },
-        NP_HF: {get:'Hedge Funds',save:'hedge_funds'},
-        NP_NR: {get:'Non-Reported',save:'non_reported'},
-        NP_O: {get:'Other',save:'other'}
+        NP_AM: { get:'Asset Managers', save:'asset_managers'},
+        NP_HF: { get:'Hedge Funds', save:'hedge_funds'},
+        NP_NR: { get:'Non-Reported', save:'non_reported'},
+        NP_O: { get:'Other', save:'other'}
     }
 }
 

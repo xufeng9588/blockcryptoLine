@@ -1,8 +1,8 @@
 const _ = require('lodash');
-const { line } = require('../../utils/database/influxdb/Table_Structure/index')
-const { linePG } = require('../../utils/database/postgres/Table_Structure/index')
-const { influxLink } = require('../../utils/database/influxdb/influx');
-const { postgresLink } = require('../../utils/database/postgres/pg')
+const { line } = require('../../utils/database_influx_pg/influxdb/Table_Structure/index')
+const { linePG } = require('../../utils/database_influx_pg/postgres/Table_Structure/index')
+const { influxLink } = require('../../utils/database_influx_pg/influxdb/influx');
+const { postgresLink } = require('../../utils/database_influx_pg/postgres/pg')
 
 async function transformData(input, dbName) {
     if (dbName === 'influx') {
@@ -27,6 +27,7 @@ async function transformInf(data, name) {
         const hd = { type: name, time: dt, result: d.Result, time_interval: 'weekly' };
         handleData.push(hd)
     })
+    // [{},{},{}] unique_id instrument_id+timestamp
     return handleData
 }
 

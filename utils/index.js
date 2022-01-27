@@ -3,8 +3,9 @@ const { blockCryptoUrl } = require('./url');
 const { queryKWord } = require('../config/index');
 const { axios } = require('./request')
 const { transformData, transformInf, transformPG } = require('./transform');
-const { DBLink } = require('../../utils/database/link_influx');
+const { DBLink } = require('../../utils/database_influx_pg/link_influx');
 const line = require('../schema/line.json');
+const crypto = require('crypto')
 // const { request } = require('../../rates/utils/request');
 
 const { LOI, NP } = queryKWord;
